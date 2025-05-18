@@ -6,11 +6,17 @@ from datetime import date
 from google import genai
 from pydantic import BaseModel
 import streamlit as st
+
+ara st.text_input("Haber İçinde Arama Yap")
+
 conn=sqlitecloud.connect('sqlitecloud://cwcgjb0ahz.g1.sqlite.cloud:8860/chinook.sqlite?apikey=DaG8uyqMPa9GdxoR7ObMoajHIdfUOrc7B0mF0IrU6Y0')
 c=conn.cursor()
 
-c.execute("SELECT * FROM haberler ORDER BY trend_id DESC LIMIT 99")
-haberler=c.fetchall()
+if len (ara)>2:
+    c.execute(f"SELECT* FROM HABERLER WHERE baslik LIKE '%{ara}%' ORDER BY trend_id DESC LIMIT 99")
+else:
+    c.execute("SELECT * FROM haberler ORDER BY trend_id DESC LIMIT 99")
+    haberler=c.fetchall()
 
 for i in range(0,len(haberler),3):
     col1,col2,col3=st.columns(3)
