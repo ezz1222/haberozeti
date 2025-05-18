@@ -5,6 +5,7 @@ import requests
 from datetime import date
 from google import genai
 from pydantic import BaseModel
+import streamlit as st
 conn=sqlitecloud.connect('sqlitecloud://cwcgjb0ahz.g1.sqlite.cloud:8860/chinook.sqlite?apikey=DaG8uyqMPa9GdxoR7ObMoajHIdfUOrc7B0mF0IrU6Y0')
 c=conn.cursor()
 
