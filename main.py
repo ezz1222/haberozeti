@@ -16,7 +16,8 @@ if len (ara)>1:
     c.execute(f"SELECT * FROM HABERLER WHERE baslik LIKE '%{ara}%' ORDER BY trend_id DESC LIMIT 99")
 else:
     c.execute("SELECT * FROM haberler ORDER BY trend_id DESC LIMIT 99")
-    haberler=c.fetchall()
+
+haberler=c.fetchall()
 
 for i in range(0,len(haberler),3):
     col1,col2,col3=st.columns(3)
