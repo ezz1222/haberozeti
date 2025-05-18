@@ -6,6 +6,15 @@ from datetime import date
 from google import genai
 from pydantic import BaseModel
 import streamlit as st
+from fonskiyonlar import trendgetir
+
+diller=["TR","DE","IT","KR","NL","DK"]
+
+guncelle=st.sidebar.button("Haberleri Guncelle")
+
+if guncelle:
+    for dil in diller
+        trendgetir(dil)
 
 ara=st.text_input("Haber İçinde Arama Yap")
 
