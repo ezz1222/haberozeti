@@ -13,7 +13,7 @@ diller=["TR","DE","IT","KR","NL","DK"]
 guncelle=st.sidebar.button("Haberleri Guncelle")
 
 if guncelle:
-    for dil in diller
+    for dil in diller:
         trendgetir(dil)
 
 ara=st.text_input("Haber İçinde Arama Yap")
