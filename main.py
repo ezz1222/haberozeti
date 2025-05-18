@@ -19,7 +19,7 @@ else:
 
 haberler=c.fetchall()
 
-if len haberler==0:
+if len (haberler)==0:
     st.warning("Herhangi Bir Haber Bulunamadı")
 
 for i in range(0,len(haberler),3):
