@@ -141,7 +141,7 @@ def habercevir(haber_id):
 
     if veri[0]==None:
         import google.generativeai as genai
-        genai.configure(api_key="AIzaSyCWa8jS3B4qXzvb25WEFVoayo1yA6oFhpE")
+        genai.configure(api_key="AIzaSyCWa8jS3B4qXzvb25WEFVoayo1yA6oFhghghghpE")
         model = genai.GenerativeModel("gemini-2.0-flash")
         response = model.generate_content(f" {veri[1]} ---> metni türkçeye çevir sadece çeviriyi yaz")
 
